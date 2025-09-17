@@ -73,7 +73,7 @@ function App() {
             onKeyDown={handleKeyDown}
             {...register("todo", { required: "Todo is required" })}
             aria-invalid={errors.todo ? "true" : "false"}
-
+            maxLength={25}
           />
           <button type='submit' className={`${editIndex !== null ? 'updatebutton ' : 'addbutton '}`}>
             {editIndex !== null ? 'Update' : 'Add'}
